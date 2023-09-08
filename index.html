@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,300;1,400&display=swap"
+        rel="stylesheet">
+    <title>Weather-App</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <header>
+                <h3 class="heading">
+                    Weather App
+                </h3>
+            </header>
+            <div class="search">
+                <input type="text" placeholder="Enter the location" class="input">
+                <button class="searchBtn">Search Weather</button>
+            </div>
+            <div class="degrees">
+                <p class="c">°C</p>
+                <label class="switch">
+                    <input type="checkbox" >
+                    <span class="slider"></span>
+                </label>
+                <p class="f">°F</p>
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="weather">
+                <div class="weatherIcon">
+                    <h4>Current weather</h4>
+                    <img src="./climate images/partyCloud.webp" alt="partyCloud" class="currentImage">
+                </div>
+                <div class="location">
+                    <div class="locationName">Kigali, RWANDA</div>
+                    <div class="date"></div>
+
+                    <div class="sun">
+                        <div class="sunRise">
+                            <h4>Sunrise</h4>
+                            <img src="./climate images/sunrise.png" alt="" class="sunImage">
+                            <p class="rise"></p>
+                        </div>
+                        <div class="sunSet">
+                            <h4>Sunset</h4>
+                            <img src="./climate images/sunset.png" alt="" class="sunImage">
+                            <p class="set"></p>
+                        </div>
+                    </div>
+                    <div class="conditions">
+                        <div class="wind">
+                            <h3>wind</h3>
+                            
+                        </div>
+                        <div class="humidity">
+                            <h3>Humidity</h3>
+
+                        </div>
+                        <div class="uv">
+                            <h3>UV</h3>
+
+                        </div>
+                        <div class="visibility">
+                            <h3>Visibility</h3>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="forecast">
+            <div class="headerForecast">
+                <div class="forecastBoth">
+                    <p class="twentyFour">24-Hours Forecast</p>
+                    <label class="switchForecast">
+                        <input type="checkbox">
+                        <span class="sliderForecast"></span>
+                    </label>
+                    <p class="ten">10-Days Forecast</p>
+                </div>
+            </div>
+            <div class="24-Hours">
+
+            </div>
+            <div class="hoursContainer">
+                <div class="hour">
+                    <h4>6 PM</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="hoursClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="hour">
+                    <h4>7 PM</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="hoursClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="hour">
+                    <h4>8 PM</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="hoursClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="hour">
+                    <h4>9 PM</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="hoursClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="hour">
+                    <h4>10 PM</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="hoursClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="hour">
+                    <h4>11 PM</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="hoursClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="hour">
+                    <h4>12 PM</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="hoursClimate">
+                    <p>18°C</p>
+                </div>
+            </div>
+            <div class="daysContainer">
+                <div class="days">
+                    <h4>Monday</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="daysClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="days">
+                    <h4>Tuesday</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="daysClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="days">
+                    <h4>Wednesday</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="daysClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="days">
+                    <h4>Thursday</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="daysClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="days">
+                    <h4>Friday</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="daysClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="days">
+                    <h4>Saturday</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="daysClimate">
+                    <p>18°C</p>
+                </div>
+                <div class="days">
+                    <h4>Sunday</h4>
+                    <img src="./climate images/partyCloud - Copy.webp" alt="" class="daysClimate">
+                    <p>18°C</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
