@@ -7,13 +7,16 @@
 
 body{
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    overflow: auto;
     /* overflow-y: auto; */
+    min-width: 370px;
 }
 .container{
     background-color: rgb(127, 125, 223);
     height: 100vh;
-    padding: 30px 20px
+    padding: 30px 20px;
+    overflow:scroll;
+    /* min-width: 370px; */
 }
 .header{
     margin: 0 25px;
@@ -132,8 +135,8 @@ input:checked+.slider::before {
 }
 .forecastBoth {
     margin: 10px 25px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
     text-align: center;
     padding: 7px;
     color: rgb(143, 145, 140);
@@ -148,7 +151,7 @@ input:checked+.slider::before {
     display: inline-block;
     width: 35px;
     height: 20px;
-    left: 100px;
+    /* left:120px; */
 }
 
 .switchForecast:hover {
@@ -212,8 +215,8 @@ input:checked+.sliderForecast::before {
     display: flex;
     justify-content: space-around;
     align-content: center;
-    margin: 40px 25px 10px 25px;
-    padding: 20px;
+    margin: 20px 25px 10px 25px;
+    padding: 15px;
     color: white;
     background-color: hsl(237, 63%, 64%);
 }
@@ -263,10 +266,12 @@ input:checked+.sliderForecast::before {
 .sunImage{
     margin-top: 2px;
     width: auto;
-    height: 50px;
+    height: 70px;
     display: flex;
+    margin-bottom: 10px;
 }
 .sun{
+    text-align: center;
     display: flex;
     justify-content: center;
     gap: 40px;
@@ -295,11 +300,31 @@ input:checked+.sliderForecast::before {
 }
 
 .hoursContainer{
-    margin: 0 25px;
+    margin:  25px;
     visibility: visible;
     display: flex;
-    justify-content: space-between;
     color: white;
+    overflow-x: auto;
+    padding-bottom: 20px;
+}
+.hour{
+    font-size: 13px;
+    text-align: center;
+}
+.hour>h6{
+    padding: 10px;
+}
+.hour>h4{
+    padding: 5px;
+}
+.hour>p{
+    color: greenyellow;
+}
+
+.conditionH{
+    
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 .hoursClimate{
     margin-top: 1px;
@@ -319,8 +344,152 @@ input:checked+.sliderForecast::before {
     height: 40px;
 }
 
-@media only screen and (max-with: 630px) {
-    .header{
-        background-color: green;
+
+
+@media only screen and (max-width: 650px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .degrees{
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0;
+        padding: 10px 0;
+
+    }
+    .container{
+        overflow: scroll;
+        padding: 20px 0;
+    }
+    .main{
+        margin: 20px;
+    }
+    .search{
+        display: flex;
+        justify-content: end;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .searchBtn{
+        margin-left: 5px;
+    }
+
+    .weather{
+        display: flex;
+        flex-direction: column;
+    }
+    .location{
+        padding: 10px;
+    }
+    .switchForecast{
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 20px;
     }
 }
+@media only screen and (max-width: 530px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .degrees{
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0;
+        padding: 10px 0;
+
+    }
+    .container{
+        overflow: scroll;
+        padding: 20px 0;
+    }
+    .main{
+        margin: 10px;
+    }
+    .search{
+        display: flex;
+        justify-content: end;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .searchBtn{
+        margin-left: 5px;
+    }
+
+    .weather{
+        display: flex;
+        flex-direction: column;
+    }
+    .location{
+        padding: 10px;
+    }
+    .switchForecast{
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 20px;
+    }
+    .twentyFour{
+        font-size: 15px;
+    }
+    .ten{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width: 430px) {
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+    }
+    .degrees{
+        display: flex;
+        justify-content: space-around;
+        margin: 10px 0;
+        padding: 10px 0;
+
+    }
+    .container{
+        overflow: scroll;
+        padding: 20px 0;
+    }
+    .main{
+        margin: 10px;
+    }
+    .search{
+        display: flex;
+        justify-content: end;
+        margin: 10px 0;
+        padding: 10px 0;
+    }
+    .searchBtn{
+        margin-left: 5px;
+    }
+
+    .weather{
+        display: flex;
+        flex-direction: column;
+    }
+    .location{
+        padding: 40px;
+    }
+    .conditions{
+        display: flex;
+        flex-direction: column;
+    }
+    .switchForecast{
+        position: relative;
+        display: inline-block;
+        width: 35px;
+        height: 20px;
+    }
+    
+}
+
