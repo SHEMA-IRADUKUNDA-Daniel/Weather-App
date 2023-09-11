@@ -122,7 +122,6 @@ async function checkWeather (city){
     const response = await fetch(`https://api.weatherapi.com/v1/forecast.json?key=f8cd4c856eea494588795341230609&q=${city}&days=7&aqi=yes&alerts=yes, mode: "no-cors"`)
     const data = await response.json();
     console.log(data);
-
     currentCondition.textContent = `${data.current.condition.text} `;
     currentTemp.textContent = `${data.current.temp_c} °C `;
     currentImage.src = `${data.current.condition.icon} `;
