@@ -332,7 +332,8 @@ input:checked+.sliderForecast::before {
     height: 40px;
 }
 .daysContainer{
-    margin: 0 25px;
+    text-align: center;
+    margin: 25px;
     visibility: hidden;
     display: flex;
     justify-content: space-between;
