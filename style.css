@@ -344,7 +344,12 @@ input:checked+.sliderForecast::before {
     width: auto;
     height: 40px;
 }
-
+.tempD{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    font-size: 10px;
+}
 
 
 @media only screen and (max-width: 650px) {
