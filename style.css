@@ -346,6 +346,7 @@ input:checked+.sliderForecast::before {
     height: 40px;
 }
 .tempD{
+    color: greenyellow;
     display: flex;
     flex-direction: column;
     margin-top: 10px;
