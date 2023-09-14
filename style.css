@@ -350,6 +350,9 @@ input:checked+.sliderForecast::before {
     margin-top: 10px;
     font-size: 10px;
 }
+.days{
+    padding: 10px;
+}
 
 
 @media only screen and (max-width: 650px) {
@@ -396,6 +399,9 @@ input:checked+.sliderForecast::before {
         width: 35px;
         height: 20px;
     }
+        .daysContainer {
+            overflow-x: auto;
+        }
 }
 @media only screen and (max-width: 530px) {
 
@@ -447,6 +453,7 @@ input:checked+.sliderForecast::before {
     .ten{
         font-size: 15px;
     }
+    
 }
 @media only screen and (max-width: 430px) {
 
