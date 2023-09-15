@@ -16,6 +16,7 @@ body{
     height: 100vh;
     padding: 30px 20px;
     overflow:scroll;
+    /* overflow-x: auto; */
     /* min-width: 370px; */
 }
 .header{
@@ -30,6 +31,8 @@ body{
     font-size: 25px;
     font-weight: bold;
 }
+
+
 
 input{
     padding: 10px;
@@ -349,11 +352,11 @@ input:checked+.sliderForecast::before {
     color: greenyellow;
     display: flex;
     flex-direction: column;
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 10px;
 }
 .days{
-    padding: 10px;
+    padding: 0 30px 10px 30px; 
 }
 
 
@@ -379,8 +382,9 @@ input:checked+.sliderForecast::before {
         margin: 20px;
     }
     .search{
+        width: auto;
         display: flex;
-        justify-content: end;
+        justify-content: center;
         margin: 10px 0;
         padding: 10px 0;
     }
@@ -423,12 +427,12 @@ input:checked+.sliderForecast::before {
         overflow: scroll;
         padding: 20px 0;
     }
-    .main{
+    /* .main{
         margin: 10px;
-    }
+    } */
     .search{
         display: flex;
-        justify-content: end;
+        justify-content: center;
         margin: 10px 0;
         padding: 10px 0;
     }
@@ -475,12 +479,12 @@ input:checked+.sliderForecast::before {
         overflow: scroll;
         padding: 20px 0;
     }
-    .main{
+    /* .main{
         margin: 10px;
-    }
+    } */
     .search{
         display: flex;
-        justify-content: end;
+        justify-content:center;
         margin: 10px 0;
         padding: 10px 0;
     }
