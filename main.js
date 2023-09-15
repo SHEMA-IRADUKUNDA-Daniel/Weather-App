@@ -75,6 +75,7 @@ async function checkWeather(city) {
 checkWeather("kigali");
 
 // SWITCH TEMPERATURE
+let dayIndex;
 let parDay;
 let isFahrenheit = false;
 function switchTemp(data) {
@@ -102,13 +103,6 @@ function switchTemp(data) {
         i
       ].textContent = `${data.forecast.forecastday[0].hour[i].temp_f} °F`;
     }
-    // for (let i = 0; i < weekDays.length; i++) {
-    //   if (isFahrenheit) {
-    //     parDay.textContent = `Min: ${data.forecast.forecastday[i].day.mintemp_f}°F Max: ${data.forecast.forecastday[i].day.mintemp_f}°F`;
-    //   } else {
-    //     parDay.textContent = `Min: ${data.forecast.forecastday[i].day.mintemp_c}°C Max: ${data.forecast.forecastday[i].day.mintemp_c}°C`;
-    //   }
-    // }
     currentTemp.textContent = `${data.current.temp_f} °F `;
     windSpeed.textContent = `${data.current.wind_mph} mph`;
     visibility.textContent = `${data.current.vis_miles} m`;
@@ -134,19 +128,6 @@ const weekDays = [
   "Friday",
   "Saturday",
 ];
-const currentDay = checkDay();
-
-function checkDay() {
-  const d = new Date();
-  const today = weekDays[d.getDay()];
-
-  for (day of weekDays) {
-    if (day === today) {
-      console.log(today);
-    }
-  }
-}
-checkDay();
 
 // SWITCH SIDES FUNCTION
 const d = new Date();
@@ -175,7 +156,8 @@ function switchSide() {
     // DAYS
 
     for (let i = todayIndex; i < weekDays.length + todayIndex; i++) {
-      const dayIndex = i % weekDays.length;
+      dayIndex = i % weekDays.length;
+
       const divDay = document.createElement("div");
       divDay.classList.add("days");
       const h4day = document.createElement("h4");
@@ -192,7 +174,16 @@ function switchSide() {
         data.forecast.forecastday[dayIndex].day.condition.text;
       h6Day.style.fontSize = "16px";
       imgDay.src = data.forecast.forecastday[dayIndex].day.condition.icon;
-      parDay.textContent = `Min: ${data.forecast.forecastday[dayIndex].day.mintemp_c}°C Max: ${data.forecast.forecastday[dayIndex].day.mintemp_c}°C`;
+
+      if (i === todayIndex) {
+        h4day.textContent = "Today";
+      }
+
+      if (isFahrenheit) {
+        parDay.textContent = `Min: ${data.forecast.forecastday[dayIndex].day.mintemp_f}°F Max: ${data.forecast.forecastday[dayIndex].day.mintemp_f}°F`;
+      } else {
+        parDay.textContent = `Min: ${data.forecast.forecastday[dayIndex].day.mintemp_c}°C Max: ${data.forecast.forecastday[dayIndex].day.mintemp_c}°C`;
+      }
 
       divDay.appendChild(h4day);
       divDay.appendChild(imgDay);
