@@ -353,10 +353,10 @@ input:checked+.sliderForecast::before {
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    font-size: 10px;
+    font-size: 12px;
 }
 .days{
-    padding: 0 30px 10px 30px; 
+    padding: 0 20px 10px 20px; 
 }
 
 
