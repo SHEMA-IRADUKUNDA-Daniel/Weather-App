@@ -36,7 +36,7 @@ const tempAll = document.querySelectorAll(".temp");
 let data;
 async function checkWeather(city) {
   const response = await fetch(
-    `http://api.weatherapi.com/v1/forecast.json?key=f8cd4c856eea494588795341230609&q=${city}&days=7&aqi=yes&alerts=yes, mode: "no-cors"`
+    `https://api.weatherapi.com/v1/forecast.json?key=f8cd4c856eea494588795341230609&q=${city}&days=7&aqi=yes&alerts=yes, mode: "no-cors"`
   );
   data = await response.json();
   console.log(data);
