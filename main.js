@@ -36,7 +36,7 @@ const tempAll = document.querySelectorAll(".temp");
 let data;
 async function checkWeather(city) {
   const response = await fetch(
-    `https://api.weatherapi.com/v1/forecast.json?key=f8cd4c856eea494588795341230609&q=${city}&days=7&aqi=yes&alerts=yes, mode: "no-cors"`
+    `http://api.weatherapi.com/v1/forecast.json?key=f8cd4c856eea494588795341230609&q=${city}&days=7&aqi=yes&alerts=yes, mode: "no-cors"`
   );
   data = await response.json();
   console.log(data);
@@ -123,19 +123,19 @@ const weekDays = [
   "Sunday",
   "Monday",
   "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
+  // "Wednesday",
+  // "Thursday",
+  // "Friday",
+  // "Saturday",
 ];
 
 // SWITCH SIDES FUNCTION
 const d = new Date();
 const todayIndex = d.getDay();
-let isSevenDays = false;
+let isThreeDays = false;
 function switchSide() {
-  if (isSevenDays) {
-    isSevenDays = false;
+  if (isThreeDays) {
+    isThreeDays = false;
     tenDaysText.style.textDecoration = "line-through";
     tenDaysText.style.color = "rgb(143, 145, 140)";
     hoursText.style.color = "greenYellow";
@@ -143,7 +143,7 @@ function switchSide() {
     forecastDiv.removeChild(daysContainer);
     forecastDiv.appendChild(hoursContainer);
   } else {
-    isSevenDays = true;
+    isThreeDays = true;
     daysContainer.innerHTML = "";
     daysContainer.style.visibility = "visible";
     forecastDiv.removeChild(hoursContainer);
@@ -192,6 +192,6 @@ function switchSide() {
       daysContainer.appendChild(divDay);
     }
   }
-  console.log(isSevenDays);
+  console.log(isThreeDays);
 }
 toggleForecast.addEventListener("change", switchSide);
