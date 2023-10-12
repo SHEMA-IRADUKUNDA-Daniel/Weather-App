@@ -340,7 +340,7 @@ input:checked+.sliderForecast::before {
     margin: 25px;
     visibility: hidden;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     color: white;
 }
 .daysClimate{
